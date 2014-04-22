@@ -37,6 +37,7 @@ public class GhaxlSnapPoint : MonoBehaviour
             GhaxlSnapPoint gsp = go.GetComponent<GhaxlSnapPoint>();
 
             gsp.parent = this;
+            gsp.prevSibling = null;
 
             if (child != null)
             {
@@ -57,6 +58,7 @@ public class GhaxlSnapPoint : MonoBehaviour
             GhaxlSnapPoint gsp = go.GetComponent<GhaxlSnapPoint>();
             
             gsp.prevSibling = this;
+            gsp.parent = null;
 
             if (nextSibling != null)
             {
